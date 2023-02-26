@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "51d54cfc-e205-4272-bf25-546263326a02",
+		"name": "tRPC_Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25713254"
+	},
+	"item": [
+		{
+			"name": "Verify Auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/user/verify-auth",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"verify-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_id\": \"Shahabazkc@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Shahabaz kc\",\r\n    \"email_id\": \"Shahabazkc@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"mobile_number\": \"7907408674\",\r\n    \"username\": \"shahabazkc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/createUser",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/user/logout",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test get",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
