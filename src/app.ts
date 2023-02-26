@@ -6,7 +6,6 @@ import { ApiError, errorConverter, errorHandler, log } from '@dev-compiler/commo
 import { inferAsyncReturnType, initTRPC } from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { userRouter } from './modules/user/userRoute';
-import { ZodError } from 'zod';
 import superjson from 'superjson';
 const app = express();
 

@@ -1,8 +1,6 @@
-import { ApiError, DBService } from '@dev-compiler/common';
+import {  DBService } from '@dev-compiler/common';
 import { initTRPC, TRPCError } from '@trpc/server';
 import { z } from 'zod';
-import UserModel from './userModel';
-import * as constants from '../../utils/constants';
 import controller from './controller';
 
 const DB = new DBService();
